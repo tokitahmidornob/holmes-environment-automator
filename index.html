@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holmes Automator | Dev Environment Setup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <header>
+            <h1>Holmes Automator</h1>
+            <p>Generate a zero-touch Windows environment configuration script.</p>
+        </header>
+
+        <section class="configuration-panel">
+            <h3>Select Your Stack</h3>
+            
+            <div class="options-grid">
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="vscode" checked>
+                    <span class="checkmark"></span>
+                    Visual Studio Code
+                </label>
+                
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="python">
+                    <span class="checkmark"></span>
+                    Python 3.11
+                </label>
+
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="git" checked>
+                    <span class="checkmark"></span>
+                    Git Version Control
+                </label>
+
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="cmake">
+                    <span class="checkmark"></span>
+                    CMake Build Engine
+                </label>
+            </div>
+
+            <button id="generateBtn" class="primary-btn">Generate Payload</button>
+        </section>
+
+        <section class="output-panel" id="outputPanel">
+            <div class="output-header">
+                <span class="file-name">setup_env.ps1</span>
+                <button id="copyBtn" class="secondary-btn">Copy to Clipboard</button>
+            </div>
+            <pre><code id="scriptOutput"></code></pre>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
