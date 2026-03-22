@@ -2,8 +2,8 @@ document.getElementById('generateBtn').addEventListener('click', generateScript)
 document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
 
 function generateScript() {
-    let script = '# Holmes Automator - Advanced Windows Payload\\n';
-    script += 'Write-Host "Initializing Setup..." -ForegroundColor Cyan\\n\\n';
+    let script = '# Holmes Automator - Advanced Windows Payload\n';
+    script += 'Write-Host "Initializing Setup..." -ForegroundColor Cyan\n\n';
 
     // Tool logic map
     const tools = [
@@ -17,19 +17,19 @@ function generateScript() {
 
     tools.forEach(tool => {
         if (document.getElementById(tool.id) && document.getElementById(tool.id).checked) {
-            script += `Write-Host "Installing ${tool.name}..." -ForegroundColor Yellow\\n`;
-            script += `winget install --id ${tool.wingetId} -e --accept-package-agreements --accept-source-agreements\\n\\n`;
+            script += `Write-Host "Installing ${tool.name}..." -ForegroundColor Yellow\n`;
+            script += `winget install --id ${tool.wingetId} -e --accept-package-agreements --accept-source-agreements\n\n`;
         }
     });
 
     // Handle VS Code Extensions separately
     if (document.getElementById('vscodeExtensions') && document.getElementById('vscodeExtensions').checked) {
-        script += 'Write-Host "Installing VS Code Extensions for C/C++..." -ForegroundColor Yellow\\n';
-        script += 'code --install-extension ms-vscode.cpptools --force\\n';
-        script += 'code --install-extension ms-vscode.cpptools-extension-pack --force\\n\\n';
+        script += 'Write-Host "Installing VS Code Extensions for C/C++..." -ForegroundColor Yellow\n';
+        script += 'code --install-extension ms-vscode.cpptools --force\n';
+        script += 'code --install-extension ms-vscode.cpptools-extension-pack --force\n\n';
     }
 
-    script += 'Write-Host "Environment Configuration Complete!" -ForegroundColor Green\\n';
+    script += 'Write-Host "Environment Configuration Complete!" -ForegroundColor Green\n';
 
     // Display the panel and the code
     document.getElementById('outputPanel').style.display = 'block';
