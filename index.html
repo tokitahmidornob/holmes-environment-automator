@@ -64,10 +64,13 @@
             <button id="generateBtn" class="primary-btn">Generate Vanguard Payload</button>
         </section>
 
-        <section class="output-panel" id="outputPanel">
+        <section class="output-panel" id="outputPanel" style="display: none;">
             <div class="output-header">
                 <span class="file-name">setup_vanguard.ps1</span>
-                <button id="copyBtn" class="secondary-btn">Copy to Clipboard</button>
+                <div class="action-buttons">
+                    <button id="copyBtn" class="secondary-btn">Copy to Clipboard</button>
+                    <button id="downloadBtn" class="primary-btn">Download .ps1</button>
+                </div>
             </div>
             <pre><code id="scriptOutput"></code></pre>
         </section>

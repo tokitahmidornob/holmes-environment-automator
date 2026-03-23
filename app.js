@@ -1,5 +1,6 @@
 document.getElementById('generateBtn').addEventListener('click', generateScript);
 document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
+document.getElementById('downloadBtn').addEventListener('click', downloadScript);
 
 function generateScript() {
     let script = '# Holmes Automator - Vanguard Engineering Payload\n';
@@ -71,4 +72,19 @@ function copyToClipboard() {
         copyBtn.innerText = 'Copied!';
         setTimeout(() => { copyBtn.innerText = originalText; }, 2000);
     });
+}
+
+function downloadScript() {
+    const codeText = document.getElementById('scriptOutput').innerText;
+    const blob = new Blob([codeText], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'holmes_vanguard_setup.ps1';
+    document.body.appendChild(a);
+    a.click();
+    
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
 }
