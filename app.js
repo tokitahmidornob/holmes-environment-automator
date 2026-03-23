@@ -2,7 +2,7 @@ document.getElementById('generateBtn').addEventListener('click', generateScript)
 document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
 
 function generateScript() {
-    let script = '# Holmes Automator - Advanced Windows Payload\n';
+    let script = '# Holmes Automator - Full Stack Windows Payload\n';
     script += 'Write-Host "Initializing Setup..." -ForegroundColor Cyan\n\n';
 
     // Tool logic map
@@ -12,7 +12,9 @@ function generateScript() {
         { id: 'python', name: 'Python 3.11', wingetId: 'Python.Python.3.11' },
         { id: 'msys2', name: 'MSYS2 (C/C++ Compiler Base)', wingetId: 'MSYS2.MSYS2' },
         { id: 'git', name: 'Git', wingetId: 'Git.Git' },
-        { id: 'cmake', name: 'CMake', wingetId: 'Kitware.CMake' }
+        { id: 'cmake', name: 'CMake', wingetId: 'Kitware.CMake' },
+        { id: 'nodejs', name: 'Node.js (LTS)', wingetId: 'OpenJS.NodeJS' },
+        { id: 'mongodb', name: 'MongoDB Server', wingetId: 'MongoDB.Server' }
     ];
 
     tools.forEach(tool => {
