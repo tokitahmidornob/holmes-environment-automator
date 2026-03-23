@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holmes Automator | Universal Dev Environment</title>
+    <title>Holmes Automator | Vanguard Edition</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,7 +11,7 @@
     <main class="app-container">
         <header>
             <h1>Holmes Automator</h1>
-            <p>The Universal Windows Environment Provisioner</p>
+            <p>Vanguard Edition: Universal Engineering & Aerospace Provisioner</p>
         </header>
 
         <section class="configuration-panel">
@@ -25,13 +25,21 @@
             </div>
 
             <div class="category-block">
-                <h3>Systems & Aerospace Programming</h3>
+                <h3>NASA & Orbital Mechanics</h3>
+                <div class="options-grid">
+                    <label class="custom-checkbox"><input type="checkbox" id="nasa_gmat"><span class="checkmark"></span>NASA GMAT (R2025a)</label>
+                    <label class="custom-checkbox"><input type="checkbox" id="nasa_spice"><span class="checkmark"></span>NASA SPICE Toolkit (C)</label>
+                    <label class="custom-checkbox"><input type="checkbox" id="poliastro"><span class="checkmark"></span>Poliastro (Python)</label>
+                </div>
+            </div>
+
+            <div class="category-block">
+                <h3>Systems Programming</h3>
                 <div class="options-grid">
                     <label class="custom-checkbox"><input type="checkbox" id="python" checked><span class="checkmark"></span>Python 3.11</label>
                     <label class="custom-checkbox"><input type="checkbox" id="msys2" checked><span class="checkmark"></span>C/C++ (MSYS2)</label>
                     <label class="custom-checkbox"><input type="checkbox" id="rust"><span class="checkmark"></span>Rust (Rustup)</label>
                     <label class="custom-checkbox"><input type="checkbox" id="go"><span class="checkmark"></span>Go (Golang)</label>
-                    <label class="custom-checkbox"><input type="checkbox" id="zig"><span class="checkmark"></span>Zig</label>
                 </div>
             </div>
 
@@ -41,7 +49,7 @@
                     <label class="custom-checkbox"><input type="checkbox" id="julia"><span class="checkmark"></span>Julia</label>
                     <label class="custom-checkbox"><input type="checkbox" id="openjdk"><span class="checkmark"></span>Java (OpenJDK 21)</label>
                     <label class="custom-checkbox"><input type="checkbox" id="dotnet"><span class="checkmark"></span>C# (.NET 8 SDK)</label>
-                    <label class="custom-checkbox"><input type="checkbox" id="rproject"><span class="checkmark"></span>R Statistics</label>
+                    <label class="custom-checkbox"><input type="checkbox" id="octave"><span class="checkmark"></span>GNU Octave</label>
                 </div>
             </div>
 
@@ -50,17 +58,15 @@
                 <div class="options-grid">
                     <label class="custom-checkbox"><input type="checkbox" id="nodejs"><span class="checkmark"></span>Node.js (LTS)</label>
                     <label class="custom-checkbox"><input type="checkbox" id="mongodb"><span class="checkmark"></span>MongoDB Server</label>
-                    <label class="custom-checkbox"><input type="checkbox" id="php"><span class="checkmark"></span>PHP</label>
-                    <label class="custom-checkbox"><input type="checkbox" id="ruby"><span class="checkmark"></span>Ruby</label>
                 </div>
             </div>
 
-            <button id="generateBtn" class="primary-btn">Generate Universal Payload</button>
+            <button id="generateBtn" class="primary-btn">Generate Vanguard Payload</button>
         </section>
 
         <section class="output-panel" id="outputPanel">
             <div class="output-header">
-                <span class="file-name">setup_env.ps1</span>
+                <span class="file-name">setup_vanguard.ps1</span>
                 <button id="copyBtn" class="secondary-btn">Copy to Clipboard</button>
             </div>
             <pre><code id="scriptOutput"></code></pre>
